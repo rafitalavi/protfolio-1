@@ -1,0 +1,44 @@
+.projects {
+    background-color: #343a40 !important; /* Dark gradient for background */
+    color: white;
+  }
+  
+  .projects h2 {
+    font-size: 2.5rem;
+    color: #f39c12; /* Bright orange for the heading */
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .projects .projects-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .projects .project-item {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding box-shadow transition */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for 3D effect */
+  }
+  
+  .projects .project-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Larger shadow for hover effect */
+  }
+  
+  .projects .project-item a {
+    text-decoration: none;
+    color: #f39c12; /* Highlighted link color */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .projects .project-item a:hover {
+    color: #1abc9c; /* Change color on hover */
+    text-decoration: underline; /* Underline the link on hover */
+  }
+  

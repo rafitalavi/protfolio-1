@@ -1,0 +1,47 @@
+.hero {
+    background: linear-gradient(135deg, #333, #555); /* Dark gradient for background */
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 3rem; /* Larger font for better emphasis */
+    color: #f39c12; /* Bright orange for the heading */
+    font-weight: 700;
+  }
+  
+  .hero .lead {
+    font-size: 1.5rem;
+    color: #1abc9c; /* Light teal for subtitle */
+  }
+  
+  .hero .btn {
+    background-color: #f39c12;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .hero .btn:hover {
+    background-color: #e67e22;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  .social-icon {
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+    color: #ff5733; /* Change to any hover color you prefer */
+  }
+  
+  .social-icon i {
+    color: inherit;
+  }
+  
+  @media (max-width: 768px) {
+    .social-icon {
+      margin: 10px 12px;
+    }
+  }
+  

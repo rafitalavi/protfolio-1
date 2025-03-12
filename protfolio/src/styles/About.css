@@ -1,0 +1,27 @@
+.about {
+    background-color: #343a40 !important; /* Dark gradient for background */
+    color: white;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    color: #f39c12; /* Bright orange for the heading */
+    font-weight: 700;
+  }
+  
+  .about .lead {
+    font-size: 1.5rem;
+    color: #1abc9c; /* Light teal for subtitle */
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #f39c12; /* Highlighted link color */
+    transform: scale(1.1);
+  }
+  

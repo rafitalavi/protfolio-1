@@ -1,0 +1,73 @@
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .cv-button:hover {
+    background-color: #0056b3;
+  }
+ /* Navbar Styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .navbar-dark {
+    background-color: #343a40; /* Dark background */
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    color: #f8f9fa; /* Light text */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #f8f9fa; /* Toggler icon color */
+  }
+  
+  /* 3D shadow effect */
+  .shadow-3d {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hover Effects */
+  .navbar-nav .nav-item:hover .nav-link {
+    color: #28a745; /* Highlight color on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Active link */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #007bff;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 767px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+   
