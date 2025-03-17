@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFacebook, FaQuestionCircle } from 'react-icons/fa'; // React Iconsimport '../styles/Hero.css';
+// import '../styles/Hero.css';  // Uncomment and ensure the path is correct
 
 const Hero = () => {
   return (
@@ -31,15 +32,17 @@ const Hero = () => {
               Software Engineer | Python | React | Django | SQA
             </motion.p>
             <motion.a
-              href="/assets/Rafit-Alavi.pdf"
-              download
-              className="btn btn-light btn-lg"
-              initial={{ opacity: 0, scale: 0.8 }}  // Start smaller and invisible
-              animate={{ opacity: 1, scale: 1 }}     // Fade in and scale to normal size
-              transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
-            >
-              Download CV
-            </motion.a>
+  href="/assets/Rafit-Alavi.pdf"
+  download
+  className="btn btn-light btn-lg"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
+  aria-label="Download CV"
+>
+  Download CV
+</motion.a>
+
           </div>
 
           {/* Image on the Right Side */}

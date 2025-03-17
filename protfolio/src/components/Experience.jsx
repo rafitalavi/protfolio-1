@@ -20,6 +20,9 @@ const Experience = () => {
           Experience
         </motion.h2>
         <p className="lead text-info">
+          Bangla Puzzle Limited
+        </p>
+        <p className="lead text-info">
           2024/11 – Present | Dhaka, Bangladesh
         </p>
         <div className="row">

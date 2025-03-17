@@ -1,103 +1,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import '../styles/Projects.css'; // Import your custom CSS file
+import '../styles/Projects.css';
+
+const projectsData = [
+  { name: "DevIn - Social App for Developers", link: "https://github.com/rafitalavi/devin_scioal_app_for_devlpoers" },
+  { name: "BookPicker - Book Listing and Wishlist App", link: "https://github.com/rafitalavi/BookPicker" },
+  { name: "E-commerce Website with Django", link: "https://github.com/rafitalavi/Online_market_place" },
+  { name: "Ticket Management System with QR Code Verification", link: "https://github.com/rafitalavi/TicketManagement" },
+  { name: "Protfolio", link: "https://botvictus.com/" },
+  { name: "Potato Leaf Disease Detection Using CNN", link: "https://github.com/rafitalavi/Potato-Leaf_Disease_Detection_Using-" },
+  { name: "GSM Based industrial protection System", link: "https://github.com/rafitalavi/Industrial-protection-System" },
+  
+  
+  
+];
 
 const Projects = () => {
   return (
-    <motion.section
-      className="projects py-5"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: false, amount: 0.2 }} // Trigger animation when 20% of the section is visible
-      transition={{ duration: 1, ease: 'easeOut' }}
+    <motion.section 
+      className="projects-container  container" 
+      initial={{ opacity: 0, y: 50 }} 
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
     >
-      <div className="container">
-        <motion.h2
-          className="display-4 text-light"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
-        >
-          Projects
-        </motion.h2>
-
-        <motion.ul
-          className="projects-list"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <motion.li
-            className="project-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
+      <h2 className="projects-title">Projects</h2>
+      <motion.div 
+        className="projects-list"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        {projectsData.map((project, index) => (
+          <motion.div 
+            key={index} 
+            className="project-card"
+            initial={{ rotateY: 90, opacity: 0 }}
+            animate={{ rotateY: 0, opacity: 1 }}
+            transition={{ delay: index * 0.2, duration: 0.6 }}
+            whileHover={{ scale: 1.05 }}
           >
-            <a
-              href="https://github.com/rafitalavi/devin_scioal_app_for_devlpoers"
-              className="text-light"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DevIn - Social App for Developers
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              {project.name}
             </a>
-          </motion.li>
-
-          <motion.li
-            className="project-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: 'easeOut' }}
-          >
-            <a
-              href="https://github.com/rafitalavi/BookPicker"
-              className="text-light"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              BookPicker - Book Listing and Wishlist App
-            </a>
-          </motion.li>
-
-          <motion.li
-            className="project-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ delay: 0.6, duration: 0.8, ease: 'easeOut' }}
-          >
-            <a
-              href="https://github.com/rafitalavi/Online_market_place"
-              className="text-light"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              E-commerce Website with Django
-            </a>
-          </motion.li>
-
-          <motion.li
-            className="project-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ delay: 0.8, duration: 0.8, ease: 'easeOut' }}
-          >
-            <a
-              href="https://github.com/rafitalavi/TicketManagement"
-              className="text-light"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ticket Management System with QR Code Verification
-            </a>
-          </motion.li>
-        </motion.ul>
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </motion.section>
   );
 };
