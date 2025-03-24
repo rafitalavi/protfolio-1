@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./styles/global.css";
+import { Helmet } from "react-helmet-async";
 
 // Lazy load components
-const Hero = lazy(() => import("./components/Hero"));
+const Hero = lazy(() => import("./components/Hero")); // ✅ Fixed lazy import
 const About = lazy(() => import("./components/About"));
 const Projects = lazy(() => import("./components/Projects"));
 const Skills = lazy(() => import("./components/Skills"));
@@ -21,6 +22,12 @@ const App = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      <Helmet>
+        <title>Rafit Alavi | Developer & SQA Engineer</title>
+        <meta name="description" content="Portfolio of Rafit Alavi - A passionate Python Developer, React Developer, and SQA Engineer." />
+        <meta name="keywords" content="Python, Django, React, Software Testing, SQA, Web Development" />
+      </Helmet>
+
       <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
         <motion.section id="hero" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
