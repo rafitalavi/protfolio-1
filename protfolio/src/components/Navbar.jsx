@@ -43,13 +43,23 @@ const Navbar = () => {
               </a>
             </motion.li>
             <motion.li 
-              className="nav-item" 
+              className="nav-item " 
               whileHover={{ scale: 1.1 }} 
               transition={{ duration: 0.3 }}
             >
               <a className="nav-link" href="#about">
                 <FaUser className="mr-2" />
                 About
+              </a>
+            </motion.li>
+            <motion.li 
+              className="nav-item" 
+              whileHover={{ scale: 1.1 }} 
+              transition={{ duration: 0.3 }}
+            >
+              <a className="nav-link" href="#service">
+                <FaUser className="mr-2" />
+                Service
               </a>
             </motion.li>
             <motion.li 

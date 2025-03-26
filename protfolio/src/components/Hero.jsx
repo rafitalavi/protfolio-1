@@ -6,12 +6,12 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaFacebook, FaQuestionCircle } from '
 const Hero = () => {
   return (
     <motion.section
-      className="hero text-center py-5 bg-dark d-flex align-items-center justify-content-center"
+      className="hero text-center py-5 mt-5 bg-dark d-flex align-items-center justify-content-center"
       initial={{ opacity: 0, y: -50 }} // Start off-screen at the top with opacity 0
       animate={{ opacity: 1, y: 0 }}   // Fade in and slide down to the center
       transition={{ duration: 1, ease: 'easeOut' }}
     >
-      <div className="container">
+      <div className="container ">
         <div className="row align-items-center">
           {/* Text on the Left Side */}
           <div className="col-md-6 text-md-left text-center">

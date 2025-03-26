@@ -22,7 +22,7 @@ const Contact = () => {
       animate={{ opacity: 1 }} 
       transition={{ duration: 1 }}
     >
-      <div className="container">
+      <div className="container ">
         <h2 className="display-4 text-light">Contact</h2>
         <motion.form 
           onSubmit={handleSubmit} 

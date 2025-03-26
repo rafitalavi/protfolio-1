@@ -26,12 +26,12 @@ const skillsData = [
 const Skills = () => {
   return (
     <motion.section 
-      className="skills-container container" 
+      className="skills-container container mt-5" 
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h2 className="skills-title">Skills</h2>
+      <h2 className="skills-title  ">Skills</h2>
       <motion.div 
         className="skills-list"
         initial={{ opacity: 0 }}

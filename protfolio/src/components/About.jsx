@@ -1,21 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'; // Import useInView hook
 import '../styles/About.css';
 
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once when in view
+    threshold: 0.2, // Trigger when 20% of the section is in view
+  });
+
   return (
     <motion.section
       className="about py-5"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: inView ? 1 : 0 }} // Animate based on visibility
       transition={{ duration: 1 }}
+      ref={ref} // Ref for intersection observer
     >
       <div className="container">
         {/* Heading Animation */}
         <motion.h2
           className="display-4 text-light"
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
+          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }} // Animation based on visibility
           transition={{ duration: 1, delay: 0.5 }}
         >
           About Me
@@ -25,7 +32,7 @@ const About = () => {
         <motion.p
           className="lead text-info"
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }} // Animation based on visibility
           transition={{ duration: 1, delay: 0.7 }}
         >
           B.Sc. in Computer Science & Engineering from Mymensingh Engineering College, University of Dhaka.
@@ -35,7 +42,7 @@ const About = () => {
         <motion.div
           className="row"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }} // Animation based on visibility
           transition={{ duration: 1, delay: 1 }}
         >
           <div className="col-md-12">
@@ -45,11 +52,13 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Accounts Links */}
-        {/* <motion.div
+        {/* Accounts Links (if needed) */}
+        {/* Uncomment if you want social links */}
+        {/* 
+        <motion.div
           className="social-links mt-4"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
           transition={{ duration: 1, delay: 1.2 }}
         >
           <h3 className="text-light">Find me on:</h3>
@@ -79,7 +88,8 @@ const About = () => {
               <i className="fab fa-twitter fa-2x"></i> Twitter
             </a>
           </div>
-        </motion.div> */}
+        </motion.div>
+        */}
       </div>
     </motion.section>
   );

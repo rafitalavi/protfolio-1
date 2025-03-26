@@ -10,7 +10,7 @@ const Experience = () => {
       animate={{ opacity: 1, x: 0 }}    // Fade in and slide in from the left
       transition={{ duration: 1, ease: 'easeOut' }}
     >
-      <div className="container">
+      <div className="container ">
         <motion.h2
           className="display-4 text-light"
           initial={{ opacity: 0, y: -30 }}
